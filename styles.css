@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: -180px;
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  transition: right 0.4s;
+}
+
+.menu:hover {
+  right: 0;
+}
+
+.menu input[type="file"] {
+  display: none;
+}
+
+.menu button {
+  border: 1px solid #000;
+  margin: 5px 5px 0 0;
+  outline: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.menu button:hover {
+  background: #000;
+  color: #fff;
+}

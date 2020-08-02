@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rays Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <canvas id="app"></canvas>
+    <div class="menu">
+      <button id="new">New</button>
+      <button id="loadFromFile">Load From File</button>
+      <input id="localFile" type="file" accept="application/JSON" />
+      <button id="loadFromInternal">Load From Internal Store</button>
+      <button id="loadFromLocal">Load From Local Storage</button>
+      <button id="saveToLocal">Save To Local Storage</button>
+      <button id="saveAs">Save As...</button>
+      <button id="help">Help</button>
+    </div>
+
+    <script type='module' src="./src/index.js"></script>
+  </body>
+</html>
