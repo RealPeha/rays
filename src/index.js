@@ -67,3 +67,7 @@ const loop = () => {
 };
 
 requestAnimationFrame(loop);
+
+setTimeout(() => {
+  document.getElementById('github').style.left = '0'
+}, 1000)
