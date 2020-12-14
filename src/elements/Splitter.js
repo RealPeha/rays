@@ -15,13 +15,24 @@ class Splitter extends Emitter {
   }
 
   powerUp() {
+    if (!this.isPowered) {
+      return
+    }
+
     const mainRay = this.rays[0];
     const ray = this.rays[1];
 
-    if (this.connecting === 2) {
+    if (this.connecting >= 2) {
       ray.len.set(0);
       ray.dir.set(0);
+
       return;
+    }
+
+    if (mainRay.dir.equal(this.powerSource.dir.clone().reverse())) {
+      this.isPowered = false
+
+      return
     }
 
     if (mainRay.dir.equal(this.powerSource.dir)) {

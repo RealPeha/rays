@@ -23,10 +23,8 @@ class Emitter extends Element {
       return;
     }
 
-    const { rays, pos } = this;
-
-    for (const ray of rays) {
-      const rayPos = pos.clone().add(ray.len);
+    for (const ray of this.rays) {
+      const rayPos = this.pos.clone().add(ray.len);
 
       if (isBehindScreen(rayPos)) {
         continue;
